@@ -28,6 +28,8 @@ MSVC_COPTS = [
 COPTS = select({
     ":msvc" : MSVC_COPTS,
     "//conditions:default": [
+        "-v",
+        "-H",
         "-DHAVE_PTHREAD",
         "-Wall",
         "-Wwrite-strings",
